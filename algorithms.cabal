@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 2a24622573f7dc266350ce446a02d94baa969b2fb4a32cd98cfb14f60832caa6
+-- hash: 4c35ba4dfe6733de15a4db304b51bf7e376ed50993a392ca5fd6ec6791004f1a
 
 name:           algorithms
 version:        0.1.0.0
@@ -34,6 +34,19 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , vector
+  default-language: Haskell2010
+
+executable 001-hanoi-tower
+  main-is: 001-hanoi-tower.hs
+  other-modules:
+      Paths_algorithms
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      algorithms
+    , base >=4.7 && <5
     , vector
   default-language: Haskell2010
 
