@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 4c35ba4dfe6733de15a4db304b51bf7e376ed50993a392ca5fd6ec6791004f1a
+-- hash: 2a8ddf633563e25d07d50e32dcd5faa48e65b2f7e3e71e128144ead70fa32b9b
 
 name:           algorithms
 version:        0.1.0.0
@@ -52,6 +52,19 @@ executable 001-hanoi-tower
 
 executable 002-mcm
   main-is: 002-matrix-chain-multiplication.hs
+  other-modules:
+      Paths_algorithms
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      algorithms
+    , base >=4.7 && <5
+    , vector
+  default-language: Haskell2010
+
+executable 003-next-permutation
+  main-is: 003-next-permutation.hs
   other-modules:
       Paths_algorithms
   hs-source-dirs:

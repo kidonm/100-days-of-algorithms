@@ -47,6 +47,16 @@ executables:
     dependencies:
     - algorithms
 
+  003-next-permutation:
+    main:                003-next-permutation.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - algorithms
+
 tests:
   algorithms-test:
     main:                Spec.hs
