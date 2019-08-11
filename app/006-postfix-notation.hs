@@ -27,14 +27,13 @@ op op (Lit a) (Lit b) = Lit $ op' a b
       Pow -> (^)
 
 calc :: [Expr] -> Expr
-calc = calc' []
+calc = head . foldl calc' []
   where
-    calc' [result] [] = result
-    calc' stack (e:es)
+    calc' stack e
       | isOp e =
         let (s':s:ss) = stack
-        in  calc' (op e s' s:ss) es
-      | otherwise = calc' (e:stack) es
+        in  (op e s' s:ss)
+      | otherwise = e:stack
 
 main = putStrLn $ show $ fromLit $ calc input
   where
