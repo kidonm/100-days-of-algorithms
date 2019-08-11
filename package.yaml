@@ -77,6 +77,16 @@ executables:
     dependencies:
     - algorithms
 
+  006-postfix-notation:
+    main:                006-postfix-notation.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - algorithms
+
 tests:
   algorithms-test:
     main:                Spec.hs

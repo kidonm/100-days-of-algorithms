@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: c7b3d82d7fa8d2cd38f17bbc2334e6e0ea70d1183b94eff3ac78c8d94f8b3c04
+-- hash: 8d98f30539bed848e3d5a968409bf120ceb6c71de36a4adfb520c961c95b08ab
 
 name:           algorithms
 version:        0.1.0.0
@@ -91,6 +91,19 @@ executable 004-counting-1bits
 
 executable 005-eratosthenes-sieve
   main-is: 005-eratosthenes-sieve.hs
+  other-modules:
+      Paths_algorithms
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      algorithms
+    , base >=4.7 && <5
+    , vector
+  default-language: Haskell2010
+
+executable 006-postfix-notation
+  main-is: 006-postfix-notation.hs
   other-modules:
       Paths_algorithms
   hs-source-dirs:
