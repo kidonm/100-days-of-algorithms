@@ -57,6 +57,26 @@ executables:
     dependencies:
     - algorithms
 
+  004-counting-1bits:
+    main:                004-counting-1bits.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - algorithms
+
+  005-eratosthenes-sieve:
+    main:                005-eratosthenes-sieve.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - algorithms
+
 tests:
   algorithms-test:
     main:                Spec.hs
