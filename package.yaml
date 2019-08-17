@@ -87,6 +87,16 @@ executables:
     dependencies:
     - algorithms
 
+  007-binary-addition:
+    main:                007-binary-addition.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - algorithms
+
 tests:
   algorithms-test:
     main:                Spec.hs
